@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #4a90e2;
+    --background-color: #f4f4f4;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.login-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ai-chat-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+#ai-input {
+    width: 70%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+#ai-submit {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ai-submit:hover {
+    background-color: #3a80d2;
+}
+
+.ai-response {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* 添加这行 */
+    color: inherit; /* 添加这行 */
+    display: flex; /* 添加这行 */
+    flex-direction: column; /* 添加这行 */
+    justify-content: center; /* 添加这行 */
+    align-items: center; /* 添加这行 */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-card i {
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0; /* 减少上下内边距 */
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 改为居中对齐 */
+    font-size: 0.8rem; /* 稍微减小字体大小 */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    margin-left: 1rem; /* 为社交图标添加左边距 */
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.1rem; /* 稍微减小图标大小 */
+    margin: 0 0.3rem; /* 减少图标之间的间距 */
+    transition: color 0.3s ease;
+}
+
+.footer-links a, .admin-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+    font-size: 0.8rem; /* 保持与其他文字一致的大小 */
+}
+
+/* 更新媒体查询以保持移动设备上的布局 */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-left, .footer-right {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .social-icons {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
